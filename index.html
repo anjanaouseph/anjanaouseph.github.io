@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<!--     
+    {% assign title = page.title | default: site.title | escape %}
+    {% assign image = "assets/images/anjanaouseph.jpg %}
+    {% assign description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+
+    {% if page.name and page.collection == 'projects' %}
+    {% assign title = page.name | escape %}
+    {% assign image = page.image %}
+    {% endif %} -->
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +18,31 @@
     <!--CSS Styles -->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
+    <!-- {/* all socials */}
+    <meta property="og:image" content="{{ image }}" />
+      {/* twitter */}
+    <meta name="twitter:image" content="{{ image }}" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ description }}"> -->
+
+    <!-- Primary Meta Tags -->
+    <title>Anjana Ouseph | Web Developer</title>
+    <meta name="title" content="Anjana Ouseph | Web Developer">
+    <meta name="description" content="Hey, I am Anjana. Find out more about me by clicking this link :)">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anjanaouseph.github.io/">
+    <meta property="og:title" content="Anjana Ouseph | Web Developer">
+    <meta property="og:description" content="Hey, I am Anjana. Find out more about me by clicking this link :)">
+    <meta property="og:image" content="https://i.ibb.co/F47KvYL/anjanaouseph.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://anjanaouseph.github.io/">
+    <meta property="twitter:title" content="Anjana Ouseph | Web Developer">
+    <meta property="twitter:description" content="Hey, I am Anjana. Find out more about me by clicking this link :)">
+    <meta property="twitter:image" content="https://i.ibb.co/F47KvYL/anjanaouseph.jpg">
     <!-- Favicons -->
     <link
       rel="apple-touch-icon"
@@ -58,12 +93,16 @@
       <div class="bio animate__animated animate__shakeX">
         <h2 class="bio-title">Hello!</h2>
         <p class="bio-text">
-          I am Anjana. 
+          Hey I am Anjana !
+          I was born in Muvattupuzha in the southern state of Kerala, India. I was brought up in Kuwait
+          from the age of 5 and studied at United Indian School in Kuwait till 12th grade, after which I moved to India.
+          I did my undergrad in B.Tech Electronics and Communication Engineering from the prestigious National Institute of
+          Technology Calicut (NIT-C) in the year 2020.
+          Currently, I am doing my Masters degree in Computer Science at Arizona State University (ASU), Tempe, USA.
           I am passionate about Data Science and Web Development.
-          I hold a Bachelor's Degree from the National Institute of Technology Calicut (NIT-C).
           I have two years of experience as a Software Developer. I am also trying to explore the world of
           Data Science during my free time.
-          My hobbies include travelling, swimming, reading books and binge watching Netflix!
+          My hobbies include travelling, reading books and binge-watching Netflix!
         </p>
       </div>
     </section>
